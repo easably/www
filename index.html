@@ -20,7 +20,104 @@
 
   <!-- Custom styles for this template -->
   <link href="css/landing-page.min.css" rel="stylesheet">
+  
+  <script>
+    
+    const translations = {
+    ru: {
+      title : "EasyLang <br> Откройте для себя вселенную информации на иностранном языке!",
+      icons_first : "Выбирайте любимую тематику",
+      description_first : "Сделайте упор на информацию, которая вам интересна",
+      icons_second : "Достигайте ощутимых результатов",
+      description_second : "Ваша сила в возможности глубже изучить любой язык",
+      icons_third : "Доверьтесь своей памяти",
+      description_third : "Теперь Вы можете намного легче запоминать информацию",
+      goal_first : "Выбирайте любимую тематику" ,
+      text_first : "Наше программное обеспечение позволяет изучать язык не только в тексте, книжных изданиях и новостях, но и в видео с помощью субтитров. Вы можете выбрать то, что вам ближе и интереснее, или объединить все способы обучения!" , 
+      goal_second : "Достигайте ощутимых результатов",
+      text_second :"Вселенная бесконечна, как и информация, которая ежедневно появляется, расширяя свои бескрайние просторы. Создайте свою базу знаний, проверяйте себя, следите за прогрессом этого полета и улучшайте свои навыки! Механика нашего программного обеспечения открывает путь к более глубокому пониманию материала. Выберите слово и находите его синонимы с различными толкованиями." , 
+      goal_third : "Доверьтесь своей памяти",
+      text_third : "Уникальный помощник позволяет буквально воскресить слово из вашей памяти. Мы показываем именно тот контекст, в котором произошло знакомство между вами и тем самым словом. Это поможет вам запомнить его быстро и, что не менее важно, надолго." ,
+      for_form : "Вы можете учиться легко, не теряя интереса!",
+      button_sign :  "Регистрация",
+      about : "О нас",
+      contact : "Контакты",
+      use : "Условия",
+      policy : "Конфиденциальность",
+      company_rights :  "&copy; EasyLang 2019. Все права защищены."
+  },
+      
+    eng: {
+      title : "EasyLang <br> Discover the universe of information in any language!",
+      icons_first : "Choose Your Favorite",
+      description_first : "Make a choice according to your interests",
+      icons_second : "Reach It",
+      description_second : "You have the power to more deeply learn any language",
+      icons_third : "Trust Your Memory",
+      description_third : "Now you can easier remember the information",
+      goal_first : "Choose Your Favorite",
+      text_first : "Our software allows you to learn the language not only in the text and on today's news, but also in video subtitles.  You can choose what is closer and more interesting for you or combine all the ways of learning" , 
+      goal_second : "Reach It", 
+      text_second : "The universe is infinite, like information that appears every day. Build your knowledge base, check yourself, follow the progress of this flight and improve your skills! Our software mechanics open the way to a deeper understanding of the material. Select the word and see the synonyms or construction synonyms with various explanations at the same time" , 
+      goal_third : "Trust Your Memory", 
+      text_third : "A unique tutor allows you to literally resurrect a word from your memory. We show exactly the context in which the acquaintance between you and a specific word occurred. It helps you remember it quickly and for a long time",
+      for_form : "You can study easily without losing interest!",
+      button_sign :  "Sign up!",
+      about : "About",
+      contact : "Contact",
+      use :" Terms of Use",
+      policy : "Privacy Policy",
+      company_rights : "&copy; EasyLang 2019. All Rights Reserved.",
+  }
+}
 
+function changeLanguage(lang){
+  const {title, icons_first, description_first, icons_second, description_second, icons_third, description_third, goal_first, text_first, goal_second, text_second, goal_third, text_third, for_form, button_sign, about, contact, use, policy, company_rights} = translations[lang];
+  const titleDocument = document.getElementById('title');
+  const icons_firstDocument = document.getElementById('icons_first');
+  const description_firstDocument = document.getElementById('description_first');
+  const icons_secondDocument = document.getElementById('icons_second');
+  const description_secondDocument = document.getElementById('description_second');
+  const icons_thirdDocument = document.getElementById('icons_third');
+  const description_thirdDocument = document.getElementById('description_third');
+  const goal_firstDocument = document.getElementById('goal_first');
+  const text_firstDocument = document.getElementById('text_first');
+  const goal_secondDocument = document.getElementById('goal_second');
+  const text_secondDocument = document.getElementById('text_second');
+  const goal_thirdDocument = document.getElementById('goal_third');
+  const text_thirdDocument = document.getElementById('text_third') ;
+  const for_formDocument = document.getElementById('for_form');
+  const button_signDocument = document.getElementById('button_sign');
+  const aboutDocument = document.getElementById('about');
+  const contactDocument = document.getElementById('contact');
+  const useDocument = document.getElementById('use');
+  const policyDocument = document.getElementById('policy');
+  const company_rightsDocument = document.getElementById('company_rights');
+
+  titleDocument.innerHTML = title;
+  icons_firstDocument.innerHTML = icons_first;
+  description_firstDocument.innerHTML = description_first;
+  icons_secondDocument.innerHTML = icons_second;
+  description_secondDocument.innerHTML = description_second;
+  icons_thirdDocument.innerHTML = icons_third;
+  description_thirdDocument.innerHTML = description_third;
+  goal_firstDocument.innerHTML = goal_first;
+  text_firstDocument.innerHTML =  text_first;
+  goal_secondDocument.innerHTML = goal_second;
+  text_secondDocument.innerHTML = text_second;
+  goal_thirdDocument.innerHTML = goal_third;
+  text_thirdDocument.innerHTML = text_third;
+  for_formDocument.innerHTML = for_form; 
+  button_signDocument.innerHTML = button_sign;
+  aboutDocument.innerHTML = about; 
+  contactDocument.innerHTML = contact; 
+  useDocument.innerHTML = use; 
+  policyDocument.innerHTML = policy;
+  company_rightsDocument.innerHTML = company_rights;
+
+
+}
+  </script>
 </head>
 
 <body>
@@ -29,7 +126,10 @@
   <nav class="navbar navbar-light bg-light static-top">
     <div class="container">
       <a class="navbar-brand" href="#">EasyLang</a>
-      <!--<a class="btn btn-primary" href="#">Sign In</a>-->
+    </div>
+    <div>  
+      <a onclick = changeLanguage("eng") href="#">En &#47</a>
+      <a onclick = changeLanguage("ru") href="#">Ru</a>
     </div>
   </nav>
 
@@ -39,7 +139,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5">EasyLang <br> Discover the universe of information in any language!</h1>
+          <h1 class="mb-5" id="title">EasyLang <br> Discover the universe of information in any language!</h1>
         </div>
         <!--<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">-->
           <!--<form>-->
@@ -66,8 +166,8 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-screen-desktop m-auto text-primary"></i>
             </div>
-            <h3>Choose Your Favorite</h3>
-            <p class="lead mb-0">Make a choice according to your interests</p>
+            <h3 id="icons_first">Choose Your Favorite</h3>
+            <p class="lead mb-0" id="description_first">Make a choice according to your interests</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -75,8 +175,8 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-layers m-auto text-primary"></i>
             </div>
-            <h3>Reach It</h3>
-            <p class="lead mb-0">You have the power to more deeply learn any language</p>
+            <h3 id="icons_second">Reach It</h3>
+            <p class="lead mb-0" id="description_second">You have the power to more deeply learn any language</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -84,8 +184,8 @@
             <div class="features-icons-icon d-flex">
               <i class="icon-check m-auto text-primary"></i>
             </div>
-            <h3>Trust Your Memory</h3>
-            <p class="lead mb-0">Now you can easier remember the information</p>
+            <h3 id="icons_third">Trust Your Memory</h3>
+            <p class="lead mb-0" id="description_third">Now you can easier remember the information</p>
           </div>
         </div>
       </div>
@@ -101,8 +201,8 @@
           <img src="img/bg-showcase-1.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Choose Your Favorite</h2>
-          <p class="lead mb-0">Our software allows you to learn the language not only in the text and on today's news, but also in video subtitles.  You can choose what is closer and more interesting for you or combine all the ways of learning!</p>
+          <h2 id="goal_first">Choose Your Favorite</h2>
+          <p class="lead mb-0" id="text_first">Our software allows you to learn the language not only in the text and on today's news, but also in video subtitles.  You can choose what is closer and more interesting for you or combine all the ways of learning!</p>
         </div>
       </div>
       <div class="row no-gutters">
@@ -110,8 +210,8 @@
           <img src="img/bg-showcase-2.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2>Reach It</h2>
-          <p class="lead mb-0">The universe is infinite, like information that appears every day. Build your knowledge base, check yourself, follow the progress of this flight and improve your skills! Our software mechanics open the way to a deeper understanding of the material. Select the word and see the synonyms or construction synonyms with various explanations at the same time.</p>
+          <h2 id="goal_second">Reach It</h2>
+          <p class="lead mb-0" id="text_second">The universe is infinite, like information that appears every day. Build your knowledge base, check yourself, follow the progress of this flight and improve your skills! Our software mechanics open the way to a deeper understanding of the material. Select the word and see the synonyms or construction synonyms with various explanations at the same time.</p>
         </div>
       </div>
       <div class="row no-gutters">
@@ -119,8 +219,8 @@
           <img src="img/bg-showcase-3.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Trust Your Memory</h2>
-          <p class="lead mb-0">A unique tutor allows you to literally resurrect a word from your memory. We show exactly the context in which the acquaintance between you and a specific word occurred. It helps you remember it quickly and for a long time.</p>
+          <h2 id="goal_third">Trust Your Memory</h2>
+          <p class="lead mb-0" id="text_third">A unique tutor allows you to literally resurrect a word from your memory. We show exactly the context in which the acquaintance between you and a specific word occurred. It helps you remember it quickly and for a long time.</p>
         </div>
       </div>
     </div>
@@ -162,16 +262,16 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4">You can study easily without losing interest!</h2>
+          <h2 class="mb-4" id="for_form">You can study easily without losing interest!</h2>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form>
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                <input type="email" class="form-control form-control-lg" placeholder="Email">
               </div>
               <div class="col-12 col-md-3">
-                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                <button type="submit" class="btn btn-block btn-lg btn-primary" id="button_sign">Sign up!</button>
               </div>
             </div>
           </form>
@@ -187,22 +287,22 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#" id="about">About</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="#" id="contact">Contact</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="#" id="use">Terms of Use</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="#" id="policy">Privacy Policy</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; EasyLang 2019. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0" id="company_rights">&copy; EasyLang 2019. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
