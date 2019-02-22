@@ -25,7 +25,9 @@
     
     const translations = {
     ru: {
-      title : "EasyLang <br> Исследуйте вселенную информации на иностранном языке!",
+      
+      title : "Исследуйте вселенную информации на иностранном языке!",
+      subtitle : "EasyLang",
       icons_first : "Выбирайте любимую тематику",
       description_first : "Сделайте упор на информацию, которая вам интересна",
       icons_second : "Достигайте ощутимых результатов",
@@ -44,11 +46,13 @@
       contact : "Контакты",
       use : "Условия",
       policy : "Конфиденциальность",
-      company_rights :  "&copy; EasyLang 2019. Все права защищены."
+      company_rights :  "&copy; EasyLang 2019. Все права защищены.",
   },
       
     eng: {
-      title : "EasyLang <br> Explore the universe of information in any language!",
+      
+      title : "Explore the universe of information in any language!",
+      subtitle : "EasyLang",
       icons_first : "Choose Your Favorite",
       description_first : "Make a choice according to your interests",
       icons_second : "Reach It",
@@ -72,8 +76,11 @@
 }
 
 function changeLanguage(lang){
-  const {title, icons_first, description_first, icons_second, description_second, icons_third, description_third, goal_first, text_first, goal_second, text_second, goal_third, text_third, for_form, button_sign, about, contact, use, policy, company_rights} = translations[lang];
+  const { title, subtitle, icons_first, description_first, icons_second, description_second, icons_third, description_third, goal_first, text_first, goal_second, text_second, goal_third, text_third, for_form, button_sign, about, contact, use, policy, company_rights} = translations[lang];
+
+  
   const titleDocument = document.getElementById('title');
+  const subtitleDocument = document.getElementById('subtitle');
   const icons_firstDocument = document.getElementById('icons_first');
   const description_firstDocument = document.getElementById('description_first');
   const icons_secondDocument = document.getElementById('icons_second');
@@ -93,8 +100,9 @@ function changeLanguage(lang){
   const useDocument = document.getElementById('use');
   const policyDocument = document.getElementById('policy');
   const company_rightsDocument = document.getElementById('company_rights');
-
+  
   titleDocument.innerHTML = title;
+  subtitleDocument.innerHTML = subtitle;
   icons_firstDocument.innerHTML = icons_first;
   description_firstDocument.innerHTML = description_first;
   icons_secondDocument.innerHTML = icons_second;
@@ -117,6 +125,7 @@ function changeLanguage(lang){
 
 
 }
+
   </script>
 </head>
 
@@ -139,7 +148,8 @@ function changeLanguage(lang){
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5" id="title">EasyLang <br> Explore the universe of information in any language!</h1>
+          <span class="mb-5" id="subtitle">EasyLang</span>
+          <h1 class="mb-5" id="title">Explore the universe of information in any language!</h1>
         </div>
         <!--<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">-->
           <!--<form>-->
@@ -262,10 +272,10 @@ function changeLanguage(lang){
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4" id="for_form">You can study easily without losing interest!</h2>
+          <h2 class="mb-4" id="for_form" style="font-size: 3.5rem;">You can study easily without losing interest!</h2>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
+         <!-- <form>
             <div class="form-row">
               <div class="col-12 col-md-9 mb-2 mb-md-0">
                 <input type="email" class="form-control form-control-lg" placeholder="Email">
@@ -274,7 +284,7 @@ function changeLanguage(lang){
                 <button type="submit" class="btn btn-block btn-lg btn-primary" id="button_sign">Sign up!</button>
               </div>
             </div>
-          </form>
+          </form>-->
         </div>
       </div>
     </div>
