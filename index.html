@@ -41,7 +41,7 @@
       goal_third : "Доверьтесь своей памяти",
       text_third : "Уникальный помощник позволяет буквально воскресить слово из вашей памяти. Мы показываем именно тот контекст, в котором произошло знакомство между вами и тем самым словом. Это поможет вам запоминать быстро и надолго." ,
       for_form : "Вы можете учиться легко, не теряя интереса!",
-      button_sign :  "Регистрация",
+     // button_sign :  "Регистрация",
       about : "О нас",
       contact : "Контакты",
       use : "Условия",
@@ -66,7 +66,7 @@
       goal_third : "Trust Your Memory", 
       text_third : "A unique tutor allows you to literally resurrect a word from your memory. We show exactly the context in which the acquaintance between you and a specific word occurred. It helps you remember it quickly and for a long time",
       for_form : "You can study easily without losing interest!",
-      button_sign :  "Sign up!",
+     // button_sign :  "Sign up!",
       about : "About",
       contact : "Contact",
       use :" Terms of Use",
@@ -94,7 +94,7 @@ function changeLanguage(lang){
   const goal_thirdDocument = document.getElementById('goal_third');
   const text_thirdDocument = document.getElementById('text_third') ;
   const for_formDocument = document.getElementById('for_form');
-  const button_signDocument = document.getElementById('button_sign');
+  //const button_signDocument = document.getElementById('button_sign');
   const aboutDocument = document.getElementById('about');
   const contactDocument = document.getElementById('contact');
   const useDocument = document.getElementById('use');
@@ -116,7 +116,7 @@ function changeLanguage(lang){
   goal_thirdDocument.innerHTML = goal_third;
   text_thirdDocument.innerHTML = text_third;
   for_formDocument.innerHTML = for_form; 
-  button_signDocument.innerHTML = button_sign;
+  //button_signDocument.innerHTML = button_sign;
   aboutDocument.innerHTML = about; 
   contactDocument.innerHTML = contact; 
   useDocument.innerHTML = use; 
@@ -136,7 +136,7 @@ function changeLanguage(lang){
     <div class="container">
       <a class="navbar-brand" href="#">EasyLang</a>
     </div>
-    <div>  
+    <div style="position: absolute; right: 5%; font-weight: 450; ">  
       <a onclick = changeLanguage("eng") href="#">En &#47</a>
       <a onclick = changeLanguage("ru") href="#">Ru</a>
     </div>
@@ -174,27 +174,27 @@ function changeLanguage(lang){
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-screen-desktop m-auto text-primary"></i>
+              <i class="fa fa-heart m-auto text-primary" aria-hidden="true"></i>
             </div>
-            <h3 id="icons_first">Choose Your Favorite</h3>
+            <h3 class="goal" id="icons_first"> <a href="#goal_first" style="text-decoration: none; color: black;">Choose Your Favorite</a> </h3>
             <p class="lead mb-0" id="description_first">Make a choice according to your interests</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-layers m-auto text-primary"></i>
+              <i class="fa fa-star m-auto text-primary"></i>
             </div>
-            <h3 id="icons_second">Reach It</h3>
+            <h3 class="goal" id="icons_second"><a href="#goal_second" style="text-decoration: none; color: black;">Reach It</a></h3>
             <p class="lead mb-0" id="description_second">You have the power to more deeply learn any language</p>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+          <div class=" features-icons-item mx-auto mb-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <i class="icon-check m-auto text-primary"></i>
+              <i class="fa fa-thumbs-up m-auto text-primary" aria-hidden="true"></i>
             </div>
-            <h3 id="icons_third">Trust Your Memory</h3>
+            <h3 class="goal" id="icons_third"><a href="#goal_third" style="text-decoration: none; color: black; ">Trust Your Memory</a></h3>
             <p class="lead mb-0" id="description_third">Now you can easier remember the information</p>
           </div>
         </div>
@@ -208,10 +208,10 @@ function changeLanguage(lang){
       <div class="row no-gutters">
 
         <div class="col-lg-6 order-lg-2 text-white">
-          <img src="img/bg-showcase-1.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
+          <img src="img/bg-showcase-1.jpg" alt="" class="img-responsive" style="width: 100%; height: auto；">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2 id="goal_first">Choose Your Favorite</h2>
+          <h2 id="goal_first" /*style="color: rgb(65, 35, 130);*/">Choose Your Favorite</h2>
           <p class="lead mb-0" id="text_first">Our software allows you to learn the language not only in the text and on today's news, but also in video subtitles.  You can choose what is closer and more interesting for you or combine all the ways of learning!</p>
         </div>
       </div>
@@ -220,7 +220,7 @@ function changeLanguage(lang){
           <img src="img/bg-showcase-2.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 my-auto showcase-text">
-          <h2 id="goal_second">Reach It</h2>
+          <h2 id="goal_second" /*style="color: rgb(65, 35, 130);*/">Reach It</h2>
           <p class="lead mb-0" id="text_second">The universe is infinite, like information that appears every day. Build your knowledge base, check yourself, follow the progress of this flight and improve your skills! Our software mechanics open the way to a deeper understanding of the material. Select the word and see the synonyms or construction synonyms with various explanations at the same time.</p>
         </div>
       </div>
@@ -229,7 +229,7 @@ function changeLanguage(lang){
           <img src="img/bg-showcase-3.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2 id="goal_third">Trust Your Memory</h2>
+          <h2 id="goal_third" /*style="color: rgb(65, 35, 130);*/">Trust Your Memory</h2>
           <p class="lead mb-0" id="text_third">A unique tutor allows you to literally resurrect a word from your memory. We show exactly the context in which the acquaintance between you and a specific word occurred. It helps you remember it quickly and for a long time.</p>
         </div>
       </div>
@@ -272,7 +272,7 @@ function changeLanguage(lang){
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <h2 class="mb-4" id="for_form" style="font-size: 3.5rem;">You can study easily without losing interest!</h2>
+          <h2 class="mb-4" id="for_form" style="font-size: 3rem;">You can study easily without losing interest!</h2>
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
          <!-- <form>
