@@ -18,6 +18,10 @@ h6 {
   font-weight: 700;
 }
 
+.fa, .fas {
+  font-weight: 1;
+}
+
 header.masthead {
   position: relative;
   background-color: #343a40;
@@ -34,11 +38,16 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 header.masthead h1 {
   font-size: 2rem;
+}
+
+header.masthead #subtitle {
+  font-size: 4.6rem;
+  text-shadow: 1px 1px 2px black, 0 0 1em white;
 }
 
 @media (min-width: 768px) {
@@ -85,6 +94,16 @@ header.masthead h1 {
 
 .features-icons .features-icons-item:hover .features-icons-icon i {
   font-size: 5rem;
+}
+
+.features-icons .goal a {
+  text-decoration: none;
+  color: black;
+}
+
+.features-icons .goal a:hover {
+  color: grey;
+  text-decoration: none;
 }
 
 .testimonials {
