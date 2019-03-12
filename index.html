@@ -26,6 +26,7 @@
     const translations = {
     ru: {
       
+      engRu : "ENG",
       title : "Исследуйте вселенную информации на иностранном языке!",
       subtitle : "EasyLang",
       icons_first : "Выбирайте любимую тематику",
@@ -47,10 +48,12 @@
       use : "Условия",
       policy : "Конфиденциальность",
       company_rights :  "&copy; EasyLang 2019. Все права защищены.",
+  
   },
       
     eng: {
-      
+
+      engRu : "RU",
       title : "Explore the universe of information in any language!",
       subtitle : "EasyLang",
       icons_first : "Choose Your Favorite",
@@ -72,73 +75,55 @@
       use :" Terms of Use",
       policy : "Privacy Policy",
       company_rights : "&copy; EasyLang 2019. All Rights Reserved.",
+      
   }
 }
 
-function changeLanguage(lang){
-  const { title, subtitle, icons_first, description_first, icons_second, description_second, icons_third, description_third, goal_first, text_first, goal_second, text_second, goal_third, text_third, for_form, button_sign, about, contact, use, policy, company_rights} = translations[lang];
+  function setElementText(elementId, text) { 
+  // add try..catch 
+  //console.log(elementId, text); 
+  document.getElementById(elementId).innerHTML = text; 
+  } 
 
-  
-  const titleDocument = document.getElementById('title');
-  const subtitleDocument = document.getElementById('subtitle');
-  const icons_firstDocument = document.getElementById('icons_first');
-  const description_firstDocument = document.getElementById('description_first');
-  const icons_secondDocument = document.getElementById('icons_second');
-  const description_secondDocument = document.getElementById('description_second');
-  const icons_thirdDocument = document.getElementById('icons_third');
-  const description_thirdDocument = document.getElementById('description_third');
-  const goal_firstDocument = document.getElementById('goal_first');
-  const text_firstDocument = document.getElementById('text_first');
-  const goal_secondDocument = document.getElementById('goal_second');
-  const text_secondDocument = document.getElementById('text_second');
-  const goal_thirdDocument = document.getElementById('goal_third');
-  const text_thirdDocument = document.getElementById('text_third') ;
-  const for_formDocument = document.getElementById('for_form');
-  //const button_signDocument = document.getElementById('button_sign');
-  const aboutDocument = document.getElementById('about');
-  const contactDocument = document.getElementById('contact');
-  const useDocument = document.getElementById('use');
-  const policyDocument = document.getElementById('policy');
-  const company_rightsDocument = document.getElementById('company_rights');
-  
-  titleDocument.innerHTML = title;
-  subtitleDocument.innerHTML = subtitle;
-  icons_firstDocument.innerHTML = icons_first;
-  description_firstDocument.innerHTML = description_first;
-  icons_secondDocument.innerHTML = icons_second;
-  description_secondDocument.innerHTML = description_second;
-  icons_thirdDocument.innerHTML = icons_third;
-  description_thirdDocument.innerHTML = description_third;
-  goal_firstDocument.innerHTML = goal_first;
-  text_firstDocument.innerHTML =  text_first;
-  goal_secondDocument.innerHTML = goal_second;
-  text_secondDocument.innerHTML = text_second;
-  goal_thirdDocument.innerHTML = goal_third;
-  text_thirdDocument.innerHTML = text_third;
-  for_formDocument.innerHTML = for_form; 
-  //button_signDocument.innerHTML = button_sign;
-  aboutDocument.innerHTML = about; 
-  contactDocument.innerHTML = contact; 
-  useDocument.innerHTML = use; 
-  policyDocument.innerHTML = policy;
-  company_rightsDocument.innerHTML = company_rights;
-
+  function changeLanguage(lang){ 
+  let currentTranslation = translations[lang]; 
+  for (var elem in currentTranslation) { 
+  setElementText(elem, currentTranslation[elem]); 
+  } 
 
 }
 
   </script>
+
+  
+
 </head>
 
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">EasyLang</a>
-    </div>
-    <div style="position: absolute; right: 5%; font-weight: 450; ">  
-      <a onclick = changeLanguage("eng") href="#">En &#47</a>
-      <a onclick = changeLanguage("ru") href="#">Ru</a>
+    <div class="navbar-brand container">
+      <!--<a class="navbar-brand" href="#">EasyLang</a>-->
+      <a href="#" class="menu-btn">
+        <span></span>
+      </a>
+      <ul class="nav-menu">
+        <span class="menu">Menu</span>
+        <li><a href="#">HOW IT WORKS</a></li>
+        <li><a href="#">WHY EasyLang?</a></li>
+        <li><a href="#">DESKTOP VERSION</a></li>
+        <li><a href="#">OUR TEAM</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      <div class="lang-change">  
+        <span id="engRu">RU</span>
+        <a onclick = changeLanguage("ru"); href="#"><img class="globe" src="img/lang.png"></a>
+        
+      </div>
+
     </div>
   </nav>
 
@@ -173,28 +158,28 @@ function changeLanguage(lang){
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex"><a href="#goal_first" class="m-auto text-primary">
-              <i class="fa fa-heart" aria-hidden="true"></i></a>
+            <div class="features-icons-icon d-flex"><a href="#toGoal" class="m-auto text-primary">
+              <i class="fa fa-heart" aria-hidden="true"" ></i></a>
             </div>
-            <h3 class="goal"> <a href="#goal_first"  id="icons_first">Choose Your Favorite</a></h3>
+            <h3 class="goal"> <a href="#toGoal"  id="icons_first">Choose Your Favorite</a></h3>
             <p class="lead mb-0" id="description_first">Make a choice according to your interests</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-            <div class="features-icons-icon d-flex"><a href="#goal_second" class="m-auto text-primary">
+            <div class="features-icons-icon d-flex"><a href="#toGoalSecond" class="m-auto text-primary">
               <i class="fa fa-star"></i></a>
             </div>
-            <h3 class="goal" ><a href="#goal_second" id="icons_second">Reach It</a></h3>
+            <h3 class="goal" ><a href="#toGoalSecond" id="icons_second">Reach It</a></h3>
             <p class="lead mb-0" id="description_second">You have the power to more deeply learn any language</p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class=" features-icons-item mx-auto mb-0 mb-lg-3">
             <div class="features-icons-icon d-flex">
-              <a href="#goal_third" class="m-auto text-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+              <a href="#toGoalThird" class="m-auto text-primary"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
             </div>
-            <h3 class="goal" > <a href="#goal_third" id="icons_third">Trust Your Memory</a></h3>
+            <h3 class="goal" > <a href="#toGoalThird" id="icons_third">Trust Your Memory</a></h3>
             <p class="lead mb-0" id="description_third">Now you can easier remember the information</p>
           </div>
         </div>
@@ -208,7 +193,7 @@ function changeLanguage(lang){
       <div class="row no-gutters">
 
         <div class="col-lg-6 order-lg-2 text-white">
-          <img src="img/bg-showcase-1.jpg" alt="" class="img-responsive" style="width: 100%; height: auto；">
+          <img src="img/bg-showcase-1.jpg" alt="" id="toGoal" class="img-responsive" style="width: 100%; height: auto；">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2 id="goal_first" /*style="color: rgb(65, 35, 130);*/">Choose Your Favorite</h2>
@@ -217,7 +202,7 @@ function changeLanguage(lang){
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 text-white showcase-img">
-          <img src="img/bg-showcase-2.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
+          <img src="img/bg-showcase-2.jpg" alt="" id="toGoalSecond" class="img-responsive" style="width: 100%;height: auto;">
         </div>
         <div class="col-lg-6 my-auto showcase-text">
           <h2 id="goal_second" /*style="color: rgb(65, 35, 130);*/">Reach It</h2>
@@ -226,7 +211,7 @@ function changeLanguage(lang){
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6 order-lg-2 text-white">
-          <img src="img/bg-showcase-3.jpg" alt="" class="img-responsive" style="width: 100%;height: auto">
+          <img src="img/bg-showcase-3.jpg" alt="" id="toGoalThird" class="img-responsive" style="width: 100%;height: auto">
         </div>
         <div class="col-lg-6 order-lg-1 my-auto showcase-text">
           <h2 id="goal_third" /*style="color: rgb(65, 35, 130);*/">Trust Your Memory</h2>
@@ -336,7 +321,7 @@ function changeLanguage(lang){
       </div>
     </div>
   </footer>
-
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
