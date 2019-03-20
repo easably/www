@@ -3,8 +3,8 @@ header.masthead {
   background-color: $gray-800;
   background: url('../img/bg-masthead.jpg') no-repeat center center;
   @include background-cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   .overlay {
     position: absolute;
     background-color: $gray-900;
@@ -15,17 +15,12 @@ header.masthead {
     opacity: 0.1;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 2.9rem;
+    padding-top: 1rem;
   }
    #subtitle {
     font-size: 4.6rem;
     text-shadow:  1px 1px 2px black, 0 0 1em white;
   }
-  @media (min-width: 768px) {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-    h1 {
-      font-size: 3rem;
-    }
-  }
+  
 }

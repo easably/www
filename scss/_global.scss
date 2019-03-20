@@ -1,5 +1,6 @@
 body {
   @include body-font;
+
 }
 
 h1,
@@ -14,95 +15,78 @@ h6 {
 
 .navbar {
 	padding: 0 0;
-	background-color: black !important;
+	background-color: #030115 !important;
+	display: block;
+	line-height: 1;
+
 }
 
+.menu-block {
+	display: flex; 
+	justify-content: center;
+	padding: 5px 0;
 
+}
 
 .nav-menu {
-	position: absolute; 
-	left: 22%;
-
-	display: flex; 
-	justify-content: space-between;
+	display: flex;
 	flex-wrap: wrap; 
-	list-style: none;
-
+	justify-content: space-between;
+	margin-top: 10px; 
 }
 
-.nav-menu .menu {
-	display: none;
-}
+/*.navbar>.container, .navbar>.container-fluid {
+	position: relative;
+	padding: 0 0;
+    margin: 0 0;
+    margin-left: 11%;
+    justify-content: center;
+}*/
 
 .nav-menu li {
 	font-size: 1rem;
+	list-style: none;
 }
 
 .nav-menu li:not(:last-of-type){
-	padding-right: 35px;
+	padding-right: 3rem;
 }
 
 .nav-menu a, .lang-change a {
-	font-weight: 800;
 	text-decoration: none;
 	color: white;
 }
 
 .nav-menu a:hover {
-	text-shadow: 4px 5px 7px #9f93ad;
+	text-shadow: 3px 5px 5px #9f93ad;
 }
 
 .menu-btn {
 	display: none;
 }
 
+.lang-change-container {
+	position: absolute;
+	top: 25%;
+	right: 2%;
+	z-index: 1;
+	width: auto;
+}
+
 .lang-change {
-	position: relative;
-	margin-right: 0;
-	margin-left: auto;
-	height: 3.4rem;
-	width: 3.8rem;
+	height: 4rem;
+	width: 5.7rem;
 }
 
 .lang-change span{
-	position: absolute;
-	left: -18%;
-	top: 25%;
+	padding-right: 10px;
 	color: white;
 	font-size: 1rem;
 }
 
-.globe {
-	position: absolute;
-	top: 15%;
-	right: 0;
-	width: 55%;
-}
-
-/*.menu-btn {
-	display: block;
-	width: 47px;
-	height: 40px;
-	border: 2px solid white;
-	border-radius: 10px;
-	position: absolute;
-	right: 10%;
-} */
-
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-  position: absolute;
-  top: 50%; margin-top: -1px;
-  left: 50%; margin-left: -10px;
-  width: 20px;
-  height: 2px;
-  background-color: white;
-}
-.menu-btn span::before,
-.menu-btn span::after {
-  content: '';
-  display: block;
+.globe { 
+	width: 35%;
+	margin-top: -5%;
 }
 
 .showcase {
@@ -116,56 +100,55 @@ h6 {
 
 .fa,.fas {
 	font-weight: 1;
+	//color: #745dad;
 }
 
 @media (max-width: 1440px) {
+
 	.nav-menu {
-	margin-right: 10%;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	}
+
 }
 
 @media (max-width: 1024px) {
+	
+	/*.navbar>.container, .navbar>.container-fluid {
+		margin-left: 0;
+
+	}*/
+	
+	.menu-block {
+		justify-content: flex-start;
+	}
+
 	.nav-menu {
-	font-size: 0.4rem;
-	left: 0;
-	margin-right: 10%;
-	flex-wrap: wrap;
-	justify-content: flex-start;
+		font-size: 0.4rem;
 	}
 
 	.nav-menu li {
-	padding-right: 35px !important; 
-}
+		padding-right: 35px !important; 
+	}
 
 }
 
 @media (max-width: 768px) {
-	.nav-menu {
-		display: none;
-	}
-	
-	.nav-menu a {
-	  color: #222;
-	  font-weight: 100;
-	  display: block;
-	  margin-right: 20px;
-	  transition: 1s;
-	}
 
-	.lang-change a,.lang-change span{
-		display: none;
-	}
+	/*nav.navbar-brand {
+		width: 0;
+	}*/
 
+/*menu button for mobile version*/
 	.menu-btn {
-	display: block;
-	width: 47px;
-	height: 40px;
-	border: 2px solid white;
-	border-radius: 10px;
-	position: absolute;
-	right: 2%;
+		display: block;
+		width: 50px;
+		height: 45px;
+		border: 2px solid white;
+		border-radius: 10px;
+		position: absolute;
+		right: 5%;
+
 	}
 
 	.menu-btn span,
@@ -173,26 +156,121 @@ h6 {
 	.menu-btn span::after {
 	  position: absolute;
 	  top: 50%; margin-top: -1px;
-	  left: 50%; margin-left: -10px;
-	  width: 20px;
+	  left: 50%; margin-left: -12px;
+	  width: 24px;
 	  height: 2px;
 	  background-color: white;
 	}
 
 	.menu-btn span::before,
 	.menu-btn span::after {
+
 	  content: '';
 	  display: block;
 	  transition: 0.2s;
+
 	}
 
+/*menu button animation*/
 	.menu-btn span::before {
+
 	  transform: translateY(-5px);
 	}
 
 	.menu-btn span::after {
+
 	  transform: translateY(5px);
 	}
 
+	.menu-btn_active span:before {
+
+	  transform: rotate(-35deg);
+	  width: 10px;
+	  transform-origin: left bottom;
+
+	}
+
+	.menu-btn_active span:after {
+
+	  transform: rotate(35deg);
+	  width: 10px;
+	  transform-origin: left top;
+
+	}
+
+	.menu-block {
+	  position: relative;
+	}
+
+	.nav-menu {
+		display: block;
+		position: absolute;
+		top: 570%;
+		right: 0;
+		transition: 0.3s;
+		transition-origin: right center;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1;
+		overflow: hidden;
+	
+	}
+
+	.nav-menu li {
+		background-color: black;
+		border-bottom: .1px solid grey;
+		line-height: 1.5;
+	}
+
+	.nav-menu_active {
+		transform: translateY(0%);
+		opacity: 1;
+		visibility: visible;
+	}
+
+
+
+
+/*menu links*/
+	.menu-nav__link {
+	  display: block;
+	  text-decoration: none;
+	  color: #fff;
+	}
+
+	.menu-nav__link {
+	  transition: 0.5s;
+	  transform-origin: right center;
+	  transform: translateX(10%);
+	  opacity: 1;
+	}
+
+	.menu-nav__link_active {
+	  transform: translateX(10%);
+	  opacity: 1;
+	}
+
+
+	.nav-menu a {
+	  color: white;
+	  font-weight: 200;
+	  transition: 1s;
+	  padding: 20px 5px;
+	  text-align: right;
+
+	}
+
+	.lang-change-container {
+		position: relative;
+		left: 5%;
+		z-index: 2;	
+		width: 40px;
+	}
+	
+	.lang-change {
+		height: 3.5rem;
+		width: 7rem;
+		padding-top: 10px;
+	}
 }
 

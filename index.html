@@ -48,6 +48,12 @@
       use : "Условия",
       policy : "Конфиденциальность",
       company_rights :  "&copy; EasyLang 2019. Все права защищены.",
+      how : "КАК ЭТО РАБОТАЕТ",
+      why : "ПОЧЕМУ EasyLang?",
+      desktop : "ВЕРСИЯ ДЛЯ ПК",
+      team : "НАША КОМАНДА",
+      blog : "БЛОГ",
+      contct : "КОНТАКТЫ"
   
   },
       
@@ -75,6 +81,12 @@
       use :" Terms of Use",
       policy : "Privacy Policy",
       company_rights : "&copy; EasyLang 2019. All Rights Reserved.",
+      how : "HOW IT WORKS",
+      why : "WHY EasyLang?" ,
+      desktop : "DESKTOP VERSION" ,
+      team : "OUR TEAM" ,
+      blog : "BLOG" ,
+      contct : "CONTACT" 
       
   }
 }
@@ -94,37 +106,40 @@
 }
 
   </script>
-
-  
-
 </head>
+
 
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-light bg-light static-top">
-    <div class="navbar-brand container">
-      <!--<a class="navbar-brand" href="#">EasyLang</a>-->
-      <a href="#" class="menu-btn">
+   <!-- <div class="navbar-brand container ">
+      <a class="navbar-brand" href="#">EasyLang</a>-->
+      <div class="menu-block">
+
+       <ul class="nav-menu">
+          <li><a class="menu-nav__link" href="#" id="how">HOW IT WORKS</a></li>
+          <li><a class="menu-nav__link" href="#" id="why">WHY EasyLang?</a></li>
+          <li><a class="menu-nav__link" href="#" id="desktop">DESKTOP VERSION</a></li>
+          <li><a class="menu-nav__link" href="#" id="team">OUR TEAM</a></li>
+          <li><a class="menu-nav__link" href="#" id="blog">BLOG</a></li>
+          <li><a class="menu-nav__link" href="#" id="contct">CONTACT</a></li>
+      </ul>
+
+     </div>
+    <a href="#" class="menu-btn">
         <span></span>
       </a>
-      <ul class="nav-menu">
-        <span class="menu">Menu</span>
-        <li><a href="#">HOW IT WORKS</a></li>
-        <li><a href="#">WHY EasyLang?</a></li>
-        <li><a href="#">DESKTOP VERSION</a></li>
-        <li><a href="#">OUR TEAM</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
+    
+    <div class="lang-change-container">
 
       <div class="lang-change">  
         <span id="engRu">RU</span>
         <a onclick = changeLanguage("ru"); href="#"><img class="globe" src="img/lang.png"></a>
-        
       </div>
 
     </div>
+   <!-- </div>-->
   </nav>
 
   <!-- Masthead -->
@@ -133,7 +148,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
-          <span class="mb-5" id="subtitle">EasyLang</span>
+          <span class="mb-5 my-5" id="subtitle">EasyLang</span>
           <h1 class="mb-5" id="title">Explore the universe of information in any language!</h1>
         </div>
         <!--<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">-->
@@ -325,6 +340,14 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script> 
+    $('.menu-btn').on('click', function(e) {
+  e.preventDefault;
+  $(this).toggleClass('menu-btn_active');
+  $('.nav-menu').toggleClass('nav-menu_active');
+  });
+</script>
 
 </body>
 
