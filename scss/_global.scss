@@ -121,14 +121,14 @@ h6 {
 	
 	.menu-block {
 		justify-content: flex-start;
-	}
-
-	.nav-menu {
-		font-size: 0.4rem;
+		
 	}
 
 	.nav-menu li {
-		padding-right: 35px !important; 
+		padding-right: 1rem !important;
+		padding-left: 1.5rem; 
+
+		font-size: .8rem;
 	}
 
 }
@@ -207,23 +207,21 @@ h6 {
 		position: absolute;
 		top: 570%;
 		right: 0;
-		transition: 0.3s;
-		transition-origin: right center;
 		opacity: 0;
 		visibility: hidden;
 		z-index: 1;
 		overflow: hidden;
+
 	
 	}
 
 	.nav-menu li {
 		background-color: black;
 		border-bottom: .1px solid grey;
-		line-height: 1.5;
+		line-height: 1.5;font-size: 1.3rem;
 	}
 
 	.nav-menu_active {
-		transform: translateY(0%);
 		opacity: 1;
 		visibility: visible;
 	}
@@ -237,19 +235,6 @@ h6 {
 	  text-decoration: none;
 	  color: #fff;
 	}
-
-	.menu-nav__link {
-	  transition: 0.5s;
-	  transform-origin: right center;
-	  transform: translateX(10%);
-	  opacity: 1;
-	}
-
-	.menu-nav__link_active {
-	  transform: translateX(10%);
-	  opacity: 1;
-	}
-
 
 	.nav-menu a {
 	  color: white;
