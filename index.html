@@ -105,6 +105,8 @@
 
 }
 
+
+
   </script>
 </head>
 
@@ -135,7 +137,7 @@
 
       <div class="lang-change">  
         <span id="engRu">RU</span>
-        <a onclick = changeLanguage("ru"); href="#"><img class="globe" src="img/lang.png"></a>
+        <a href="#"><img class="globe" src="img/lang.png"></a>
       </div>
 
     </div>
@@ -342,11 +344,21 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script> 
-    $('.menu-btn').on('click', function(e) {
+      $('.lang-change').click(function(event) {
+  event.preventDefault;
+  let lang = $('#engRu')[0].innerHTML.toLowerCase();
+  console.log(lang);
+  console.dir(changeLanguage(lang));
+  return false;
+  });
+
+   $('.menu-btn').on('click', function(e) {
   e.preventDefault;
   $(this).toggleClass('menu-btn_active');
   $('.nav-menu').toggleClass('nav-menu_active');
   });
+
+
 </script>
 
 </body>
