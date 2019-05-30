@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,500&display=swap');
+
+.navigation-bar.boxed.homepage.fixto-fixed {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+div.header-homepage {
+	background-size: cover;
+	height: 700px;
+}
+
+ul.dropdown-menu.simple-menu-items>.current_page_item>a {
+	color: white;
+	background-color: #f26d6d;
+	border-radius: 50px;
+	padding: 15px 40px;
+}
+
+h1.hero-title {
+	font-weight: 600;
+}
+
+.button.big.white.round:hover ,ul.dropdown-menu.simple-menu-items>.current_page_item>a:hover {
+	background-color:rgb(255, 180, 63);
+}
+
+.button.big.white.round,   a.button.blue {
+	margin-top: 2%;
+	background-color: #f26d6d;
+	font-size: 1.1rem;
+	border: none;
+	border-radius: 50px;
+	padding: 20px 66px;
+	color: white;
+}
+
+a.button.blue:hover {
+	background-color: rgb(255, 180, 63);
+}
+
+h3, h2 {
+ font-family: 'Comfortaa';
+	font-style: normal; font-variant: normal;
+}
+
+.content-2.content-section.content-section-spacing {
+	background-image: url("http://easylang.app/development/wp-content/uploads/2019/05/LandingEasylang2-1.png");
+	background-size: 76%;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.col-sm-5.bg-image.shadow-large-black {
+	box-shadow: none;
+	border: none;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.col-md-12.col-sm-6.col-xs-12 a.button.blue {
+	background-color: white;
+	border: 2px solid ;
+	color: #f26d6d;
+	border-radius: 50px;
+	font-size: 1rem;
+	padding: 10px 35px;
+	margin-left: 4%;
+}
+
+.col-md-12.col-sm-6.col-xs-12 a.button.blue:hover {
+	background: #f26d6d;
+	color: white;
+}
+
+.overlappable-4-mc.content-section.content-section-spacing  {
+	background: url("http://easylang.app/development/wp-content/uploads/2019/05/LandingEasylang4.1.png");
+	background-size: 95%;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.col-padding.col-sm-6.col-md-6:last-child p{
+	display: inline-block;
+	padding: 2.5%;
+	margin-left: 1%;
+	
+	width: 265px;
+	height: 120px;
+	line-height: 22px;
+
+	background-color: white;
+	color: #59a3e5;
+
+	border: 2px solid lightblue;
+	border-radius: 50px;
+	font-family: 'Comfortaa';
+}
+
+.col-sm-8.space-bottom-xs, .footer-content {
+	display: none;
+}
+
+.row.middle-xs {
+	justify-content:center;
+}
+
+@media(max-width: 1240px) {
+	h1.hero-title {
+		font-size: 2.4rem;
+	}
+	
+	div.header-homepage {
+		background-size: cover;
+		height: auto;
+	}
+	
+	div.main_menu_col {
+		display:none;
+	}
+	
+	.col-sm-5.bg-image.shadow-large-black {
+	background-size: 120%;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+	
+		.overlappable-4-mc.content-section.content-section-spacing {
+		background-size: 110%;
+	}
+}
+
+@media(max-width: 1080px){
+	div.header-homepage{
+		background-size: 140%;
+		margin-bottom: 10%;
+	}
+	
+	.content-2.content-section.content-section-spacing{
+		padding-top: 0;
+	}
+	
+	#page div .shadow-large-black{
+		top: 0 !important;
+}
+	
+	.col-sm-5.bg-image.shadow-large-black{
+		background-size: 120%;
+	
+	}
+	.content-section>div:not(.gridContainer)>.row:not(.no-spacing)>div:not(.no-gutter-col) {
+		padding-top:0;
+		padding-bottom:0;
+	}
+	
+	.col-padding.col-sm-6.col-md-6:last-child p{
+		
+	width: 310px;
+	height: auto;
+	line-height: 24px;
+	font-size: 1.3rem;
+}
+
+	
+@media(max-width: 1024px){
+	.overlappable-4-mc.content-section.content-section-spacing {
+		background-size: 170%;
+	}
+	
+	.content-section-spacing, .content-section-spacing-bottom {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+	
+	@media(max-width: 768px) {
+		.col-padding.col-sm-6.col-md-6:last-child p{
+		
+	width: 310px;
+	height: auto;
+	}	
+		
+	div.header-homepage{
+		background-size: cover;
+	}
+		
+	a.button.big.white.round.outline {
+		padding: 12px 30px;
+		margin-top: 2%;
+		margin-bottom: 15%;
+	}
+	
+	a.button.blue {
+		padding: 12px 30px;
+		font-size: 1.1rem;
+	}
+		
+	}
+	
+@media(max-width: 425px) {
+	body {
+		font-size: 1rem;
+	}
+	
+	div.logo_col{
+		max-width: 100%;
+	}
+	
+	.logo_col img{
+		display:block;
+		margin-left: 65%;
+	}
+	
+	div.main_menu_col {
+		display:none;
+	}
+	div.header-homepage{
+		background-size: cover;
+		margin-bottom: 0;
+	}
+	
+	h1.hero-title, h2 {
+		font-size: 1.6rem;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	
+	h2 {
+		line-height: 2rem;
+	}
+	
+	p.header-subtitle {
+		display: none;
+	}
+	
+	div.header-homepage {
+	background-position: bottom;
+	}
+	
+	.col-sm-5.bg-image.shadow-large-black {
+	background-size: 110%;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+	
+	.overlappable-4-mc.content-section.content-section-spacing {
+		background-size: 260%;
+	}	
+}
